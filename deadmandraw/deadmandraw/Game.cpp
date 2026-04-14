@@ -26,8 +26,7 @@ bool Game::playerTurn()
 	}
 	// switch current_player
 	std::string drawCard = "y";
-	printf("--- Round %d, Turn %d ---\n", round, turn);
-	printf("%s's turn.\n", current_player->name().c_str());
+	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, current_player->name().c_str());
 	current_player->displayPlayerBank();
 
 	while (drawCard == "y") {
@@ -47,6 +46,23 @@ bool Game::playerTurn()
 	}
 
 	return (game still going);
+}
+
+void Game::gameEnd()
+{
+	printf("--- Game Over ---");
+	player1->displayPlayerBank();
+	player2->displayPlayerBank();
+
+	if (player1->score() > player2->score()) {
+		printf("%s wins!", player1->name().c_str());
+	}
+	else if (player2->score() > player1->score()) {
+		printf("%s wins!", player2->name().c_str());
+	}
+	else {
+		printf("It's a draw!");
+	}
 }
 
 void Game::shuffleDeck(CardCollection& cards)

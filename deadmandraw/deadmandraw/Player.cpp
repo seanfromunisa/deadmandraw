@@ -27,6 +27,8 @@ int Player::calculateScore()
 	for (int i : map.value) {
 		total = total + i;
 	}
+
+	score = total;
 	
 	return total;
 }
