@@ -23,7 +23,7 @@ bool Game::playerTurn()
 	turn++;
 	if (turn % 2 == 0) {
 		round++;
-	};
+	}
 	// switch current_player
 	std::string drawCard = "y";
 	printf("--- Round %d, Turn %d ---\n", round, turn);
