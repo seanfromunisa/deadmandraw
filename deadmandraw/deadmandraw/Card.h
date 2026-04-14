@@ -8,7 +8,7 @@ class Card
 
 public:
 	virtual ~Card();
-	virtual std::string toString() const;
+	virtual std::string toString() const
 	const CardType& type() const;
 	virtual void play(Game &game, Player &player);
 	virtual void willAddToBank(Game& game, Player& player);

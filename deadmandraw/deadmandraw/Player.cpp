@@ -9,6 +9,16 @@ Player::Player()
 	std::string name = names[rand() % 10];
 }
 
+const std::string Player::name() const
+{
+	return name;
+}
+
+const int Player::score() const
+{
+	return score;
+}
+
 int Player::calculateScore()
 {
 	map< Card.CardType, int> scoredCards;

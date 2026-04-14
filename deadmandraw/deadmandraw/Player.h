@@ -8,8 +8,11 @@ class Player
 public:
 	Player();
 	~Player();
+	const std::string name() const;
+	const int score() const;
 	bool playCard();
 	bool bankCard();
 	void displayPlayerBank() const;
+	int calculateScore();
 };
 
