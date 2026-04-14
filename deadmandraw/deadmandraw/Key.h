@@ -7,6 +7,6 @@ class Key :
 
 public:
     Key();
-    virtual std::string toString() override;
+    virtual std::string toString() const override;
     virtual void play(Game& game, Player& player) override;
 };

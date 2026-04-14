@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <iostream>
 class Player
 {
 	std::string name;
@@ -10,6 +10,6 @@ public:
 	~Player();
 	bool playCard();
 	bool bankCard();
-	void displayPlayerBank();
+	void displayPlayerBank() const;
 };
 
