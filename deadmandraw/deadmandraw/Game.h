@@ -5,7 +5,7 @@ class Game
 {
 	int round;
 	int turn;
-	Player current_player;
+	Player* current_player;
 
 public:
 	Game();
