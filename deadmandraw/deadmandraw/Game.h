@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "Player.h"
 class Game
 {
@@ -10,7 +11,7 @@ public:
 	Game();
 	~Game();
 	void gameEnd();
-	CardCollection shuffleDeck();
-	void playerTurn();
+	void shuffleDeck();
+	bool playerTurn();
 };
 
