@@ -4,12 +4,13 @@
 #include "Game.h"
 class Card
 {
-	enum CardType;
+	enum CardType {
+		Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken};
+	CardType type;
 
 public:
-	virtual ~Card();
 	virtual std::string toString() const
-	const CardType& type() const;
+	const CardType& getType() const;
 	virtual void play(Game &game, Player &player);
-	virtual void willAddToBank(Game& game, Player& player);
+	virtual void willAddToBank(Game &game, Player &player);
 };

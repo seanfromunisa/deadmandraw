@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Card.h"
+#include <iostream>
 #include <map>
 
 Player::Player()
@@ -9,32 +10,32 @@ Player::Player()
 	std::string name = names[rand() % 10];
 }
 
-const std::string Player::name() const
+std::string Player::getName() const
 {
 	return name;
 }
 
-const int Player::score() const
+int Player::getScore() const
 {
 	return score;
 }
 
 int Player::calculateScore()
 {
-	map< Card.CardType, int> scoredCards;
-	for (int i : Card.CardType) {
-		map[i] = 0;
+	std::map<Card, int> scoredCards;
+	for (int i : Card) {
+		scoredCards[i] = 0;
 	}
 
-	for (int i : playerBank) {
-		CardType currentCardType  = i.type();
-		if (map[currentCardType] < i.value()) {
-			map[currentCardType] = i.value();
+	for (Card i : playerBank) {
+		CardType currentCardType = i.getType();
+		if (scoredCards[currentCardType] < i.value()) {
+			scoredCards[currentCardType] = i.value();
 		}
 	}
 
 	int total = 0;
-	for (int i : map.value) {
+	for (int i : scoredCards.value) {
 		total = total + i;
 	}
 
