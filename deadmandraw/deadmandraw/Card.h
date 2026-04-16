@@ -10,14 +10,16 @@ public:
 	};
 protected:
 	CardType _type;
+	std::string _stringType;
 	int _value;
 
 public:
 	Card(CardType& type, int& value);
 	virtual ~Card();
-	virtual std::string toString() const;
+	std::string toString() const;
 	const CardType& type() const;
 	int value() const;
-	virtual void play(Game &game, Player &player);
+	virtual bool play(Game &game);
+	virtual void effect(Game &game);
 	virtual void willAddToBank(Game &game, Player &player);
 };

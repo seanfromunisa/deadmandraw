@@ -8,8 +8,8 @@ Player::Player()
 	int _score = 0;
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
 	std::string _name = names[rand() % 10];
-	CardCollection _playerBank = {};
-	CardCollection _playArea = {};
+	CardCollection playerBank = {};
+	CardCollection playArea = {};
 }
 
 Player::~Player()
@@ -26,10 +26,28 @@ int Player::score() const
 	return _score;
 }
 
-bool Player::playCard(CardCollection& cards)
+bool Player::playCard(std::shared_ptr<Card> card)
+{
+	printf("%s draws a %s", _name, card->toString());
+	bool notBust = true;
+	for (std::shared_ptr<Card> playedCard : playArea) {
+		if (playedCard->type() == card->type()) {
+			notBust = false;
+		}
+	}
+	if (notBust == false) {
+		printf("BUST! %s loses all cards in play area.", _name);
+		playArea.clear();
+	}
+	else {
+		playArea.push_back(card);
+	}
+	return notBust;
+}
+
+void Player::bankCards()
 {
 
-	return false;
 }
 
 int Player::calculateScore()
@@ -39,7 +57,7 @@ int Player::calculateScore()
 		scoredCards[suit] = 0;
 	}
 
-	for (std::shared_ptr<Card> card : _playerBank) {
+	for (std::shared_ptr<Card> card : playerBank) {
 		int currentCardType = card->type();
 		if (scoredCards[currentCardType] < card->value()) {
 			scoredCards[currentCardType] = card->value();

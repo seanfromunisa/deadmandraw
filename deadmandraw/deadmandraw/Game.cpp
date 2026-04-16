@@ -12,6 +12,7 @@ Game::Game()
 	int turn = 0;
 	PlayerPtr currentPlayer = player1;
 	CardCollection cards = {};
+	CardCollection discardPile = {};
 
 	std::vector<Card::CardType> suits = {
 		Card::Cannon, Card::Chest, Card::Key, Card::Anchor, Card::Sword, Card::Hook,
@@ -40,6 +41,8 @@ Game::~Game()
 
 void Game::playerTurn()
 {
+	Game& deadMansDraw = *this;
+
 	turn++;
 	if (turn % 2 == 0) {
 		round++;
@@ -55,8 +58,8 @@ void Game::playerTurn()
 	currentPlayer->displayPlayerBank();
 
 	while (drawCard == "y") {
-		if (cards.size() > 1) {
-			if (currentPlayer->playCard(cards)) {
+		if (cards[0]->play(deadMansDraw)) {
+			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
 				scanf("%s", drawCard);
@@ -66,11 +69,11 @@ void Game::playerTurn()
 				}
 			}
 			else {
-				drawCard = "n";
+				printf("NO MORE CARDS!\n");
 			}
 		}
 		else {
-			printf("NO MORE CARDS!\n");
+			drawCard = "n";
 		}
 	}
 }

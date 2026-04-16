@@ -5,19 +5,22 @@
 
 class Player
 {
+public:
 	typedef std::vector<std::shared_ptr<Card>> CardCollection;
 
+	CardCollection playerBank;
+	CardCollection playArea;
+
+protected:
 	std::string _name;
 	int _score;
-	CardCollection _playerBank;
-	CardCollection _playArea;
 
 public:
 	Player();
 	~Player();
 	std::string name() const;
 	int score() const;
-	bool playCard(CardCollection& cards);
+	bool playCard(std::shared_ptr<Card> card);
 	void bankCards();
 	void displayPlayerBank() const;
 	int calculateScore();
