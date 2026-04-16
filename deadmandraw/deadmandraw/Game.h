@@ -1,12 +1,11 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include <vector>
 #include "Player.h"
 #include "Card.h"
 class Game
 {
-	typedef std::vector<Card*> CardCollection;
+	typedef std::vector<std::shared_ptr<Card>> CardCollection;
 
 	Player* player1;
 	Player* player2;
@@ -22,4 +21,3 @@ public:
 	void shuffleDeck(CardCollection& cards);
 	bool playerTurn();
 };
-

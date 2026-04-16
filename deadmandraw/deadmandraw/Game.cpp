@@ -1,4 +1,8 @@
 #include "Game.h"
+#include <algorithm>
+#include <random>
+#include <memory>
+#include "Card.h"
 
 Game::Game()
 {
@@ -7,15 +11,31 @@ Game::Game()
 	int round = 0;
 	int turn = 0;
 	Player* currentPlayer = player1;
+	CardCollection cards = {};
 
-	// set up cards
+	std::vector<Card::CardType> suits = {
+		Card::Cannon, Card::Chest, Card::Key, Card::Anchor, Card::Sword, Card::Hook,
+		Card::Oracle, Card::Map, Card::Mermaid, Card::Kraken};
+	for ( Card::CardType& suit : suits ) {
+		for (int value = 2; value < 7; value++) {
+			int finalValue = value;
+			if (suit == Card::Mermaid) {
+				finalValue + 2;
+			}
+			cards.push_back(std::make_shared<Card>(suit, finalValue));
+		}
+	}
 	shuffleDeck(cards);
 
 	printf("Starting Dead Man's Draw++!\n");
-	while (game still going) {
+	//while (game still going) {
 		playerTurn();
-	}
+	//}
 	gameEnd();
+}
+
+Game::~Game()
+{
 }
 
 bool Game::playerTurn()
@@ -30,18 +50,24 @@ bool Game::playerTurn()
 	currentPlayer->displayPlayerBank();
 
 	while (drawCard == "y") {
-		if (currentPlayer->playCard()) {
-			currentPlayer->printPlayArea();
-			printf("\nDo you want to draw again? (y/n): ");
-			//scan for input
-			if (drawCard == "n") {
-				// for each card in play area:
-					// card->willAddToBank();
-				currentPlayer->displayPlayerBank();
+		if (cards.size() > 1) {
+			
+			if (currentPlayer->playCard(cards[0])) {
+				currentPlayer->printPlayArea();
+				printf("\nDo you want to draw again? (y/n): ");
+				//scan for input
+				if (drawCard == "n") {
+					// for each card in play area:
+						// card->willAddToBank();
+					currentPlayer->displayPlayerBank();
+				}
+			}
+			else {
+				drawCard = "n";
 			}
 		}
 		else {
-			drawCard = "n";
+
 		}
 	}
 

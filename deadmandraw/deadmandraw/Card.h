@@ -4,9 +4,11 @@
 #include "Game.h"
 class Card
 {
-protected:
+public:
 	enum CardType {
-		Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken};
+		Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
+	};
+protected:
 	CardType _type;
 	int _value;
 

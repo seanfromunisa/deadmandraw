@@ -8,6 +8,12 @@ Player::Player()
 	int _score = 0;
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
 	std::string _name = names[rand() % 10];
+	CardCollection _playerBank = {};
+	CardCollection _playArea = {};
+}
+
+Player::~Player()
+{
 }
 
 std::string Player::name() const
@@ -20,17 +26,23 @@ int Player::score() const
 	return _score;
 }
 
+bool Player::playCard(std::shared_ptr<Card> card)
+{
+
+	return false;
+}
+
 int Player::calculateScore()
 {
 	std::map<int, int> scoredCards;
-	for (int i = 0; i < 10; i++) {
-		scoredCards[i] = 0;
+	for (int suit = 0; suit < 10; suit++) {
+		scoredCards[suit] = 0;
 	}
 
-	for (Card i : playerBank) {
-		int currentCardType = i.type();
-		if (scoredCards[currentCardType] < i.value()) {
-			scoredCards[currentCardType] = i.value();
+	for (std::shared_ptr<Card> card : _playerBank) {
+		int currentCardType = card->type();
+		if (scoredCards[currentCardType] < card->value()) {
+			scoredCards[currentCardType] = card->value();
 		}
 	}
 
