@@ -1,6 +1,20 @@
 #include "Card.h"
 
-CardType& Card::getType() const
+Card::Card(CardType& type, int& value) :
+	_type{ type },
+	_value{ value }
+{ }
+
+Card::~Card()
 {
-	return type;
+}
+
+const Card::CardType& Card::type() const
+{
+	return _type;
+}
+
+int Card::value() const
+{
+	return _value;
 }

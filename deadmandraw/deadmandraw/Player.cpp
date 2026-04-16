@@ -5,41 +5,41 @@
 
 Player::Player()
 {
-	int score = 0;
+	int _score = 0;
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
-	std::string name = names[rand() % 10];
+	std::string _name = names[rand() % 10];
 }
 
-std::string Player::getName() const
+std::string Player::name() const
 {
-	return name;
+	return _name;
 }
 
-int Player::getScore() const
+int Player::score() const
 {
-	return score;
+	return _score;
 }
 
 int Player::calculateScore()
 {
-	std::map<Card, int> scoredCards;
-	for (int i : Card) {
+	std::map<int, int> scoredCards;
+	for (int i = 0; i < 10; i++) {
 		scoredCards[i] = 0;
 	}
 
 	for (Card i : playerBank) {
-		CardType currentCardType = i.getType();
+		int currentCardType = i.type();
 		if (scoredCards[currentCardType] < i.value()) {
 			scoredCards[currentCardType] = i.value();
 		}
 	}
 
 	int total = 0;
-	for (int i : scoredCards.value) {
-		total = total + i;
+	for (const auto& keyValuePair : scoredCards) {
+		total = total + keyValuePair.second;
 	}
 
-	score = total;
+	_score = total;
 	
 	return total;
 }
