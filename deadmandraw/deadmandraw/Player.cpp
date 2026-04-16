@@ -37,6 +37,7 @@ bool Player::playCard(std::shared_ptr<Card> card)
 	}
 	if (notBust == false) {
 		printf("BUST! %s loses all cards in play area.", _name);
+		// move all cards from play area to discard pile
 		playArea.clear();
 	}
 	else {
