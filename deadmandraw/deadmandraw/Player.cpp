@@ -26,7 +26,7 @@ int Player::score() const
 	return _score;
 }
 
-bool Player::playCard(std::shared_ptr<Card> card)
+bool Player::playCard(CardCollection& cards)
 {
 
 	return false;

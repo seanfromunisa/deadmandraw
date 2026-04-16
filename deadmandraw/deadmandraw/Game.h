@@ -5,19 +5,21 @@
 #include "Card.h"
 class Game
 {
+public:
+	typedef std::shared_ptr<Player> PlayerPtr;
 	typedef std::vector<std::shared_ptr<Card>> CardCollection;
 
-	Player* player1;
-	Player* player2;
+	PlayerPtr player1;
+	PlayerPtr player2;
 	int round;
 	int turn;
-	Player* currentPlayer;
+	PlayerPtr currentPlayer;
 	CardCollection cards;
+	CardCollection discardPile;
 
-public:
 	Game();
 	~Game();
 	void gameEnd();
 	void shuffleDeck(CardCollection& cards);
-	bool playerTurn();
+	void playerTurn();
 };

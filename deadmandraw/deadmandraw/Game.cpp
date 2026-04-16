@@ -6,11 +6,11 @@
 
 Game::Game()
 {
-	Player* player1 = new Player();
-	Player* player2 = new Player();
+	PlayerPtr player1 = std::make_shared<Player>();
+	PlayerPtr player2 = std::make_shared<Player>();
 	int round = 0;
 	int turn = 0;
-	Player* currentPlayer = player1;
+	PlayerPtr currentPlayer = player1;
 	CardCollection cards = {};
 
 	std::vector<Card::CardType> suits = {
@@ -28,9 +28,9 @@ Game::Game()
 	shuffleDeck(cards);
 
 	printf("Starting Dead Man's Draw++!\n");
-	//while (game still going) {
+	while (cards.size() > 0 && turn < 20) {
 		playerTurn();
-	//}
+	}
 	gameEnd();
 }
 
@@ -38,27 +38,30 @@ Game::~Game()
 {
 }
 
-bool Game::playerTurn()
+void Game::playerTurn()
 {
 	turn++;
 	if (turn % 2 == 0) {
 		round++;
 	}
-	// switch currentPlayer
+	if (currentPlayer == player1) {
+		currentPlayer = player2;
+	}
+	else {
+		currentPlayer = player1;
+	}
 	std::string drawCard = "y";
 	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
 	currentPlayer->displayPlayerBank();
 
 	while (drawCard == "y") {
 		if (cards.size() > 1) {
-			
-			if (currentPlayer->playCard(cards[0])) {
+			if (currentPlayer->playCard(cards)) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
-				//scan for input
+				scanf("%s", drawCard);
 				if (drawCard == "n") {
-					// for each card in play area:
-						// card->willAddToBank();
+					currentPlayer->bankCards();
 					currentPlayer->displayPlayerBank();
 				}
 			}
@@ -67,11 +70,9 @@ bool Game::playerTurn()
 			}
 		}
 		else {
-
+			printf("NO MORE CARDS!\n");
 		}
 	}
-
-	//return (game still going);
 }
 
 void Game::gameEnd()
