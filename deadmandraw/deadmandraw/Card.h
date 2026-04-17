@@ -19,7 +19,8 @@ public:
 	std::string toString() const;
 	const CardType& type() const;
 	int value() const;
-	virtual bool play(Game &game);
-	virtual void effect(Game &game);
+	// Look up how virtual functions or classes work
+	virtual void play(Game &game, Player &player);
+	Card& grabFromBank(Player &player);
 	virtual void willAddToBank(Game &game, Player &player);
 };

@@ -14,11 +14,13 @@ Game::Game()
 	CardCollection cards = {};
 	CardCollection discardPile = {};
 
+	// CHANGE ALL OF THIS!!! need to make individual cardtypes
 	std::vector<Card::CardType> suits = {
 		Card::Cannon, Card::Chest, Card::Key, Card::Anchor, Card::Sword, Card::Hook,
 		Card::Oracle, Card::Map, Card::Mermaid, Card::Kraken};
 	for ( Card::CardType& suit : suits ) {
 		for (int value = 2; value < 7; value++) {
+			// esp dw about this. handle in card.play()
 			int finalValue = value;
 			if (suit == Card::Mermaid) {
 				finalValue + 2;
@@ -47,29 +49,34 @@ void Game::playerTurn()
 	if (turn % 2 == 0) {
 		round++;
 	}
+
 	if (currentPlayer == player1) {
 		currentPlayer = player2;
 	}
 	else {
 		currentPlayer = player1;
 	}
+
 	std::string drawCard = "y";
 	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
 	currentPlayer->displayPlayerBank();
 
 	while (drawCard == "y") {
-		if (cards[0]->play(deadMansDraw)) {
+		std::shared_ptr<Card> drawnCard = cards[static_cast<int>(cards.size()) - 1];
+		cards.pop_back();
+		if (currentPlayer->playCard(drawnCard, deadMansDraw, currentPlayer)) {
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
 				scanf("%s", drawCard);
 				if (drawCard == "n") {
-					currentPlayer->bankCards();
+					currentPlayer->bankCards(deadMansDraw, currentPlayer);
 					currentPlayer->displayPlayerBank();
 				}
 			}
 			else {
-				printf("NO MORE CARDS!\n");
+				printf("NO MORE CARDS! The deck is now empty.\n");
+				drawCard = "n";
 			}
 		}
 		else {

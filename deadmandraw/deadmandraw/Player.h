@@ -20,8 +20,8 @@ public:
 	~Player();
 	std::string name() const;
 	int score() const;
-	bool playCard(std::shared_ptr<Card> card);
-	void bankCards();
+	bool playCard(Card &card, Game &game, Player &player);
+	void bankCards(Game& game, Player& player);
 	void displayPlayerBank() const;
 	int calculateScore();
 	void printPlayArea() const;

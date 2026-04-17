@@ -1,6 +1,8 @@
 #include "Card.h"
 #include <string>
+#include <map>
 
+// NEED TO RELY ON SUBTYPES MORE!!!!! GET RID OF SO MUCH OF THIS!!!!!
 Card::Card(CardType& type, int& value) :
 	_type{ type },
 	_value{ value }
@@ -28,15 +30,28 @@ int Card::value() const
 	return _value;
 }
 
-bool Card::play(Game& game)
+Card& Card::grabFromBank(Player& player)
 {
-	std::shared_ptr<Card> drawnCard = game.cards[static_cast<int>(game.cards.size()) - 1];
-	game.cards.pop_back();
-	if (game.currentPlayer->playCard(drawnCard)) {
-		effect(game);
-		return true;
+	std::map<CardType, std::shared_ptr<Card>> availableCards;
+	for (std::shared_ptr<Card> card : player.playerBank) {
+		CardType currentCardType = card->type();
+		if (availableCards[currentCardType]->value() < card->value()) {
+			availableCards[currentCardType] = card;
+		}
 	}
-	else {
-		return false;
-	};
+
+	std::vector<std::shared_ptr<Card>> finalCards = {};
+	for (const auto& keyValuePair : availableCards) {
+		finalCards.push_back(keyValuePair.second);
+	}
+
+	for (int i = 0; i < static_cast<int>(finalCards.size()); i++) {
+		printf("(%d) %s\n" (i + 1), finalCards[i]->toString());
+	}
+
+	int cardPick;
+	printf("Which card do you pick? ");
+	scanf("%d", cardPick);
+
+	return finalCards[cardPick - 1];
 }
