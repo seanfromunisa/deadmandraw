@@ -3,11 +3,12 @@
 class Key :
     public Card
 {
-    enum CardType;
+    CardType _type;
+    std::string _stringType;
+    int _value;
 
 public:
-    Key();
-    virtual std::string toString() const override;
+    Key(int& value);
     virtual void play(Game& game, Player& player) override;
-    virtual void willAddToBank(Game& game, Player& player) override;
+    void willAddToBank(Game& game, Player& player) override;
 };

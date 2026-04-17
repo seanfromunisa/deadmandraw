@@ -14,6 +14,7 @@ public:
 	int round;
 	int turn;
 	PlayerPtr currentPlayer;
+	PlayerPtr nonCurrentPlayer;
 	CardCollection cards;
 	CardCollection discardPile;
 

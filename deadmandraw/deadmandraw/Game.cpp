@@ -11,6 +11,7 @@ Game::Game()
 	int round = 0;
 	int turn = 0;
 	PlayerPtr currentPlayer = player1;
+	PlayerPtr nonCurrentPlayer = player2;
 	CardCollection cards = {};
 	CardCollection discardPile = {};
 
@@ -52,9 +53,11 @@ void Game::playerTurn()
 
 	if (currentPlayer == player1) {
 		currentPlayer = player2;
+		nonCurrentPlayer = player1;
 	}
 	else {
 		currentPlayer = player1;
+		nonCurrentPlayer = player2;
 	}
 
 	std::string drawCard = "y";
@@ -62,7 +65,7 @@ void Game::playerTurn()
 	currentPlayer->displayPlayerBank();
 
 	while (drawCard == "y") {
-		std::shared_ptr<Card> drawnCard = cards[static_cast<int>(cards.size()) - 1];
+		std::shared_ptr<Card> drawnCard = cards.back();
 		cards.pop_back();
 		if (currentPlayer->playCard(drawnCard, deadMansDraw, currentPlayer)) {
 			if (cards.size() > 0) {

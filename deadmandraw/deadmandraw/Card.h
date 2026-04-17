@@ -14,13 +14,11 @@ protected:
 	int _value;
 
 public:
-	Card(CardType& type, int& value);
 	virtual ~Card();
 	std::string toString() const;
 	const CardType& type() const;
 	int value() const;
-	// Look up how virtual functions or classes work
 	virtual void play(Game &game, Player &player);
 	Card& grabFromBank(Player &player);
-	virtual void willAddToBank(Game &game, Player &player);
+	void willAddToBank(Game &game, Player &player);
 };

@@ -3,12 +3,12 @@
 class Cannon :
     public Card
 {
-    enum CardType;
+    CardType _type;
+    std::string _stringType;
+    int _value;
 
 public:
-    Cannon();
-    virtual std::string toString() const override;
+    Cannon(int& value);
     virtual void play(Game& game, Player& player) override;
-    virtual void willAddToBank(Game& game, Player& player) override;
 };
 

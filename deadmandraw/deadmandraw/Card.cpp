@@ -2,15 +2,6 @@
 #include <string>
 #include <map>
 
-// NEED TO RELY ON SUBTYPES MORE!!!!! GET RID OF SO MUCH OF THIS!!!!!
-Card::Card(CardType& type, int& value) :
-	_type{ type },
-	_value{ value }
-{
-	std::string typeStrings[] = { "Cannon", "Chest", "Key", "Anchor", "Sword", "Hook", "Oracle", "Map", "Mermaid", "Kraken" };
-	std::string _stringType = typeStrings[_type];
-}
-
 Card::~Card()
 {
 }

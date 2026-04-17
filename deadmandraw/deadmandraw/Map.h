@@ -3,11 +3,11 @@
 class Map :
     public Card
 {
-    enum CardType;
+    CardType _type;
+    std::string _stringType;
+    int _value;
 
 public:
-    Map();
-    virtual std::string toString() const override;
+    Map(int& value);
     virtual void play(Game& game, Player& player) override;
-    virtual void willAddToBank(Game& game, Player& player) override;
 };
