@@ -2,11 +2,12 @@
 //
 
 #include <iostream>
-#include <Game.h>
+#include "Game.h"
+#include "Card.h"
 
 int main()
 {
-    Game();
+	Game game;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

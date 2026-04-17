@@ -56,6 +56,11 @@ void Player::bankCards(Game& game, Player& player)
 	}
 }
 
+void Player::displayPlayerBank() const
+{
+	printf("print player bank lol");
+}
+
 int Player::calculateScore()
 {
 	std::map<Card::CardType, std::shared_ptr<Card>> scoredCards;
@@ -74,4 +79,9 @@ int Player::calculateScore()
 	_score = total;
 	
 	return total;
+}
+
+void Player::printPlayArea() const
+{
+	printf("print play area lmfao");
 }

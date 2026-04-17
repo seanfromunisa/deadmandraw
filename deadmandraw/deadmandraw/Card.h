@@ -18,7 +18,7 @@ public:
 	std::string toString() const;
 	const CardType& type() const;
 	int value() const;
-	virtual void play(Game &game, Player &player);
+	virtual void play(Game& game, Player& player);
 	Card& grabFromBank(Player &player);
-	void willAddToBank(Game &game, Player &player);
+	virtual void willAddToBank(Game& game, Player& player);
 };

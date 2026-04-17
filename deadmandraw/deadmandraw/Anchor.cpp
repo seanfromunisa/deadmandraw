@@ -9,8 +9,8 @@ Anchor::Anchor(int& value) :
 
 void Anchor::play(Game& game, Player& player)
 {
-}
-
-void Anchor::willAddToBank(Game& game, Player& player)
-{
+	std::shared_ptr<Card> thisCard = player.playArea.back();
+	player.playArea.pop_back();
+	player.bankCards(game, player);
+	player.playArea.push_back(thisCard);
 }

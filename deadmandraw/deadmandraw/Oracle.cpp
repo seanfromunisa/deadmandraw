@@ -9,14 +9,10 @@ Oracle::Oracle(int& value) :
 
 void Oracle::play(Game& game, Player& player)
 {
-	if (static_cast<int>(game.cards.size) = 0) {
-		printf("There are no more cards. Play continues.\n")
+	if (game.cards.empty()) {
+		printf("There are no more cards. Play continues.\n");
 	}
 	else {
 		printf("The Oracle sees a %s\n", game.cards.back()->toString());
 	}
-}
-
-void Oracle::willAddToBank(Game& game, Player& player)
-{
 }

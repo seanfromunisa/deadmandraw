@@ -9,5 +9,5 @@ class Chest :
 
 public:
     Chest(int& value);
-    virtual void play(Game& game, Player& player) override;
+    void play(Game& game, Player& player) override;
 };

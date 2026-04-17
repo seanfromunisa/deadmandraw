@@ -9,9 +9,5 @@ Mermaid::Mermaid(int& value) :
 
 void Mermaid::play(Game& game, Player& player)
 {
-	printf{"No effect but Mermaids are worth more.\n"};
-}
-
-void Mermaid::willAddToBank(Game& game, Player& player)
-{
+	printf("No effect but Mermaids are worth more.\n");
 }

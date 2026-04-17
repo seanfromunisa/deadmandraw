@@ -37,12 +37,17 @@ Card& Card::grabFromBank(Player& player)
 	}
 
 	for (int i = 0; i < static_cast<int>(finalCards.size()); i++) {
-		printf("(%d) %s\n" (i + 1), finalCards[i]->toString());
+		printf("(%d) %s\n", (i + 1), finalCards[i]->toString());
 	}
 
 	int cardPick;
 	printf("Which card do you pick? ");
 	scanf("%d", cardPick);
 
-	return finalCards[cardPick - 1];
+	return *finalCards[cardPick - 1];
+}
+
+void Card::willAddToBank(Game& game, Player& player)
+{
+	printf("Card banked.");
 }

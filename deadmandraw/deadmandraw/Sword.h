@@ -9,5 +9,5 @@ class Sword :
 
 public:
     Sword(int& value);
-    virtual void play(Game& game, Player& player) override;
+    void play(Game& game, Player& player) override;
 };

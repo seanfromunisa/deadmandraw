@@ -3,6 +3,16 @@
 #include <random>
 #include <memory>
 #include "Card.h"
+#include "Anchor.h"
+#include "Cannon.h"
+#include "Chest.h"
+#include "Hook.h"
+#include "Key.h"
+#include "Kraken.h"
+#include "Map.h"
+#include "Mermaid.h"
+#include "Oracle.h"
+#include "Sword.h"
 
 Game::Game()
 {
@@ -15,20 +25,38 @@ Game::Game()
 	CardCollection cards = {};
 	CardCollection discardPile = {};
 
-	// CHANGE ALL OF THIS!!! need to make individual cardtypes
-	std::vector<Card::CardType> suits = {
-		Card::Cannon, Card::Chest, Card::Key, Card::Anchor, Card::Sword, Card::Hook,
-		Card::Oracle, Card::Map, Card::Mermaid, Card::Kraken};
-	for ( Card::CardType& suit : suits ) {
-		for (int value = 2; value < 7; value++) {
-			// esp dw about this. handle in card.play()
-			int finalValue = value;
-			if (suit == Card::Mermaid) {
-				finalValue + 2;
-			}
-			cards.push_back(std::make_shared<Card>(suit, finalValue));
-		}
+
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Anchor>(i));
 	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Cannon>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Chest>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Hook>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Key>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Kraken>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Map>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Mermaid>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Oracle>(i));
+	}
+	for (int i = 2; i < 8; i++) {
+		cards.push_back(std::make_shared<Sword>(i));
+	}
+
 	shuffleDeck(cards);
 
 	printf("Starting Dead Man's Draw++!\n");
@@ -54,7 +82,7 @@ void Game::playerTurn()
 	if (currentPlayer == player1) {
 		currentPlayer = player2;
 		nonCurrentPlayer = player1;
-	}
+	}z
 	else {
 		currentPlayer = player1;
 		nonCurrentPlayer = player2;
@@ -67,13 +95,13 @@ void Game::playerTurn()
 	while (drawCard == "y") {
 		std::shared_ptr<Card> drawnCard = cards.back();
 		cards.pop_back();
-		if (currentPlayer->playCard(drawnCard, deadMansDraw, currentPlayer)) {
+		if (currentPlayer->playCard(*drawnCard, deadMansDraw, *currentPlayer)) {
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
 				scanf("%s", drawCard);
 				if (drawCard == "n") {
-					currentPlayer->bankCards(deadMansDraw, currentPlayer);
+					currentPlayer->bankCards(deadMansDraw, *currentPlayer);
 					currentPlayer->displayPlayerBank();
 				}
 			}

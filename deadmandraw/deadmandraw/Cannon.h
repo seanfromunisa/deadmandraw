@@ -9,6 +9,6 @@ class Cannon :
 
 public:
     Cannon(int& value);
-    virtual void play(Game& game, Player& player) override;
+    void play(Game& game, Player& player) override;
 };
 
