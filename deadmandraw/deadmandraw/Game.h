@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include "Player.h"
-#include "Card.h"
+
+class Player;
+class Card;
+
 class Game
 {
 public:

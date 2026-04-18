@@ -1,4 +1,6 @@
 #include "Chest.h"
+#include "Player.h"
+#include "Game.h"
 
 Chest::Chest(int& value) :
 	_value{ value }

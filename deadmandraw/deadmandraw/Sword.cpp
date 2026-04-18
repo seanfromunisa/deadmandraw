@@ -1,4 +1,6 @@
 #include "Sword.h"
+#include "Player.h"
+#include "Game.h"
 
 Sword::Sword(int& value) :
 	_value{ value }

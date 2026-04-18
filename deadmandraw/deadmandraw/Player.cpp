@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Card.h"
+#include "Game.h"
 #include <iostream>
 #include <map>
 
@@ -52,8 +53,8 @@ void Player::bankCards(Game& game, Player& player)
 {
 	for (std::shared_ptr<Card> card : playArea) {
 		card->willAddToBank(game, player);
-		playArea.clear();
 	}
+	playArea.clear();
 }
 
 void Player::displayPlayerBank() const

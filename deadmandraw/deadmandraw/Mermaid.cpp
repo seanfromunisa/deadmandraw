@@ -1,4 +1,6 @@
 #include "Mermaid.h"
+#include "Player.h"
+#include "Game.h"
 
 Mermaid::Mermaid(int& value) :
 	_value{ value + 2 }

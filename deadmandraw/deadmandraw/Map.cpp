@@ -1,4 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Map.h"
+#include "Player.h"
+#include "Game.h"
 #include <string>
 #include <vector>
 
@@ -26,9 +29,9 @@ void Map::play(Game& game, Player& player)
 			printf("(%d) %s\n", (i + 1), mapCards[i]->toString());
 		}
 
-		int cardPick;
+		int cardPick = 0;
 		printf("Which card do you pick? ");
-		scanf("%d", cardPick);
+		scanf("%d", &cardPick);
 
 		std::shared_ptr<Card> pickedCard = mapCards[cardPick];
 		for (int i = 0; i < static_cast<int>(mapCards.size()); i++) {

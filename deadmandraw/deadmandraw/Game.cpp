@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Game.h"
+#include "Player.h"
 #include <algorithm>
 #include <random>
 #include <memory>
@@ -28,32 +30,14 @@ Game::Game()
 
 	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Anchor>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Cannon>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Chest>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Hook>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Key>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Kraken>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Map>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Mermaid>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Oracle>(i));
-	}
-	for (int i = 2; i < 8; i++) {
 		cards.push_back(std::make_shared<Sword>(i));
 	}
 
@@ -82,7 +66,7 @@ void Game::playerTurn()
 	if (currentPlayer == player1) {
 		currentPlayer = player2;
 		nonCurrentPlayer = player1;
-	}z
+	}
 	else {
 		currentPlayer = player1;
 		nonCurrentPlayer = player2;

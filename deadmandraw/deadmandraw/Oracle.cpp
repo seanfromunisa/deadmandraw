@@ -1,4 +1,6 @@
 #include "Oracle.h"
+#include "Player.h"
+#include "Game.h"
 
 Oracle::Oracle(int& value) :
 	_value{ value }

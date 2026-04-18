@@ -1,17 +1,19 @@
 #pragma once
 #include <iostream>
-#include "Player.h"
-#include "Game.h"
+
+class Player;
+class Game;
+
 class Card
 {
 public:
 	enum CardType {
-		Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
+		None, Cannon, Chest, Key, Anchor, Sword, Hook, Oracle, Map, Mermaid, Kraken
 	};
 protected:
-	CardType _type;
+	CardType _type = CardType::None;
 	std::string _stringType;
-	int _value;
+	int _value = 0;
 
 public:
 	virtual ~Card();

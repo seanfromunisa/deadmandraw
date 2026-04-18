@@ -1,4 +1,6 @@
 #include "Hook.h"
+#include "Player.h"
+#include "Game.h"
 
 Hook::Hook(int& value) :
 	_value{ value }

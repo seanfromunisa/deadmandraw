@@ -1,4 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Card.h"
+#include "Player.h"
+#include "Game.h"
 #include <string>
 #include <map>
 
@@ -21,6 +24,10 @@ int Card::value() const
 	return _value;
 }
 
+void Card::play(Game& game, Player& player)
+{
+}
+
 Card& Card::grabFromBank(Player& player)
 {
 	std::map<CardType, std::shared_ptr<Card>> availableCards;
@@ -40,9 +47,9 @@ Card& Card::grabFromBank(Player& player)
 		printf("(%d) %s\n", (i + 1), finalCards[i]->toString());
 	}
 
-	int cardPick;
+	int cardPick = 0;
 	printf("Which card do you pick? ");
-	scanf("%d", cardPick);
+	scanf("%d", &cardPick);
 
 	return *finalCards[cardPick - 1];
 }

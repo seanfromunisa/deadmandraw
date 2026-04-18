@@ -1,4 +1,6 @@
 #include "Cannon.h"
+#include "Player.h"
+#include "Game.h"
 
 Cannon::Cannon(int& value) :
 	_value{ value }

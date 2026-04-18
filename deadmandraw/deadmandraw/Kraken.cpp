@@ -1,4 +1,6 @@
 #include "Kraken.h"
+#include "Player.h"
+#include "Game.h"
 #include <algorithm>
 
 Kraken::Kraken(int& value) :

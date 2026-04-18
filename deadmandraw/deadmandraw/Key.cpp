@@ -1,4 +1,6 @@
 #include "Key.h"
+#include "Player.h"
+#include "Game.h"
 #include <algorithm>
 
 Key::Key(int& value) :

@@ -1,4 +1,6 @@
 #include "Anchor.h"
+#include "Player.h"
+#include "Game.h"
 
 Anchor::Anchor(int& value) :
 	_value{ value }

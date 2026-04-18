@@ -4,6 +4,18 @@
 #include <iostream>
 #include "Game.h"
 #include "Card.h"
+#include "Player.h"
+#include "Anchor.h"
+#include "Cannon.h"
+#include "Chest.h"
+#include "Hook.h"
+#include "Key.h"
+#include "Kraken.h"
+#include "Map.h"
+#include "Mermaid.h"
+#include "Oracle.h"
+#include "Sword.h"
+
 
 int main()
 {
