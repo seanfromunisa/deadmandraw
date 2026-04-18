@@ -73,8 +73,9 @@ void Game::playerTurn()
 	}
 
 	std::string drawCard = "y";
-	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
+	//printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
 	currentPlayer->displayPlayerBank();
+	printf("%d", static_cast<int>(cards.size()));
 
 	while (drawCard == "y") {
 		std::shared_ptr<Card> drawnCard = cards.back();
@@ -83,7 +84,7 @@ void Game::playerTurn()
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
-				scanf("%s", drawCard);
+				scanf("%s", &drawCard);
 				if (drawCard == "n") {
 					currentPlayer->bankCards(deadMansDraw, *currentPlayer);
 					currentPlayer->displayPlayerBank();
