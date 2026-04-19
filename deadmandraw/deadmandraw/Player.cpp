@@ -29,17 +29,17 @@ int Player::score() const
 
 bool Player::playCard(Card& card, Game& game, Player& player)
 {
-	printf("%s draws a %s", _name, card.toString());
+	printf("%s draws a %s", _name.c_str(), card.toString());
 	bool notBust = true;
-	for (std::shared_ptr<Card> playedCard : playArea) {
-		if (playedCard->type() == card.type()) {
+	for (Card playedCard : playArea) {
+		if (playedCard.type() == card.type()) {
 			notBust = false;
 		}
 	}
 	if (notBust == false) {
-		printf("BUST! %s loses all cards in play area.", _name);
-		for (std::shared_ptr<Card> disCards : playArea) {
-			game.discardPile.push_back(disCards);
+		printf("BUST! %s loses all cards in play area.", _name.c_str());
+		for (Card disCards : playArea) {
+			game.discardPile.push_back(&disCards);
 		}
 		playArea.clear();
 	}
@@ -51,8 +51,8 @@ bool Player::playCard(Card& card, Game& game, Player& player)
 
 void Player::bankCards(Game& game, Player& player)
 {
-	for (std::shared_ptr<Card> card : playArea) {
-		card->willAddToBank(game, player);
+	for (Card card : playArea) {
+		card.willAddToBank(game, player);
 	}
 	playArea.clear();
 }
@@ -64,17 +64,17 @@ void Player::displayPlayerBank() const
 
 int Player::calculateScore()
 {
-	std::map<Card::CardType, std::shared_ptr<Card>> scoredCards;
-	for (std::shared_ptr<Card> card : playerBank) {
-		Card::CardType currentCardType = card->type();
-		if (scoredCards[currentCardType]->value() < card->value()) {
+	std::map<Card::CardType, Card> scoredCards;
+	for (Card card : playerBank) {
+		Card::CardType currentCardType = card.type();
+		if (scoredCards[currentCardType].value() < card.value()) {
 			scoredCards[currentCardType] = card;
 		}
 	}
 
 	int total = 0;
 	for (const auto& keyValuePair : scoredCards) {
-		total = total + keyValuePair.second->value();
+		total = total + keyValuePair.second.value();
 	}
 
 	_score = total;

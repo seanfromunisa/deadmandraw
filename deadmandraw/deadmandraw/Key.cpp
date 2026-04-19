@@ -17,18 +17,18 @@ void Key::play(Game& game, Player& player)
 
 void Key::willAddToBank(Game& game, Player& player)
 {
-	for (std::shared_ptr<Card> card : player.playArea) {
-		if (card->type() == CardType::Chest) {
+	for (Card card : player.playArea) {
+		if (card.type() == CardType::Chest) {
 			if (game.discardPile.empty()) {
 				printf("Chest and Key activated. There are no cards in the Discard pile. Play continues.\n");
 			}
 			else {
 				printf("Chest and Key activated. Added ");
 				for (int i = 0; i < std::min(static_cast<int>(game.discardPile.size()), static_cast<int>(player.playArea.size())); i++) {
-					std::shared_ptr<Card> drawnCard = game.discardPile.back();
+					Card drawnCard = *game.discardPile.back();
 					game.discardPile.pop_back();
 					player.playerBank.push_back(drawnCard);
-					printf("%s, ", drawnCard->toString());
+					printf("%s, ", drawnCard.toString());
 				}
 				printf("to your bank.");
 			}

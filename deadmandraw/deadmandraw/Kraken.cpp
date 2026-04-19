@@ -14,8 +14,8 @@ void Kraken::play(Game& game, Player& player)
 {
 	printf("Draw 3 Cards from the deck and play each:\n");
 	for (int i = 0; i < std::min(3, static_cast<int>(game.cards.size())); i++) {
-		std::shared_ptr<Card> drawnCard = game.cards.back();
+		Card drawnCard = *game.cards.back();
 		game.cards.pop_back(); 
-		player.playCard(*drawnCard, game, player);
+		player.playCard(drawnCard, game, player);
 	}
 }

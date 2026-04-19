@@ -18,27 +18,27 @@
 
 Game::Game()
 {
-	PlayerPtr player1 = std::make_shared<Player>();
-	PlayerPtr player2 = std::make_shared<Player>();
+	Player* player1 = new Player();
+	Player* player2 = new Player();
 	int round = 0;
 	int turn = 0;
-	PlayerPtr currentPlayer = player1;
-	PlayerPtr nonCurrentPlayer = player2;
+	Player& currentPlayer = *player1;
+	Player& nonCurrentPlayer = *player2;
 	CardCollection cards = {};
 	CardCollection discardPile = {};
 
 
 	for (int i = 2; i < 8; i++) {
-		cards.push_back(std::make_shared<Anchor>(i));
-		cards.push_back(std::make_shared<Cannon>(i));
-		cards.push_back(std::make_shared<Chest>(i));
-		cards.push_back(std::make_shared<Hook>(i));
-		cards.push_back(std::make_shared<Key>(i));
-		cards.push_back(std::make_shared<Kraken>(i));
-		cards.push_back(std::make_shared<Map>(i));
-		cards.push_back(std::make_shared<Mermaid>(i));
-		cards.push_back(std::make_shared<Oracle>(i));
-		cards.push_back(std::make_shared<Sword>(i));
+		cards.push_back(new Anchor(i));
+		cards.push_back(new Cannon(i));
+		cards.push_back(new Chest(i));
+		cards.push_back(new Hook(i));
+		cards.push_back(new Key(i));
+		cards.push_back(new Kraken(i));
+		cards.push_back(new Map(i));
+		cards.push_back(new Mermaid(i));
+		cards.push_back(new Oracle(i));
+		cards.push_back(new Sword(i));
 	}
 
 	shuffleDeck(cards);
@@ -78,13 +78,13 @@ void Game::playerTurn()
 	printf("%d", static_cast<int>(cards.size()));
 
 	while (drawCard == "y") {
-		std::shared_ptr<Card> drawnCard = cards.back();
+		Card drawnCard = *cards.back();
 		cards.pop_back();
-		if (currentPlayer->playCard(*drawnCard, deadMansDraw, *currentPlayer)) {
+		if (currentPlayer->playCard(drawnCard, deadMansDraw, *currentPlayer)) {
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
-				scanf("%s", &drawCard);
+				scanf("%s", drawCard);
 				if (drawCard == "n") {
 					currentPlayer->bankCards(deadMansDraw, *currentPlayer);
 					currentPlayer->displayPlayerBank();

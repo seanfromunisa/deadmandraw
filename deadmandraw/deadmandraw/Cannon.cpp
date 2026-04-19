@@ -16,6 +16,6 @@ void Cannon::play(Game& game, Player& player)
 	}
 	else {
 		printf("Steal the top card of any suit from the other player's Bank into your Play Area:\n");
-		game.discardPile.push_back(std::make_shared<Card>(grabFromBank(*game.nonCurrentPlayer)));
+		game.discardPile.push_back(&grabFromBank(*game.nonCurrentPlayer));
 	}
 }

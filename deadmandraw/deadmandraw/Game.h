@@ -8,15 +8,14 @@ class Card;
 class Game
 {
 public:
-	typedef std::shared_ptr<Player> PlayerPtr;
-	typedef std::vector<std::shared_ptr<Card>> CardCollection;
+	typedef std::vector<Card*> CardCollection;
 
-	PlayerPtr player1;
-	PlayerPtr player2;
+	Player* player1;
+	Player* player2;
 	int round;
 	int turn;
-	PlayerPtr currentPlayer;
-	PlayerPtr nonCurrentPlayer;
+	Player* currentPlayer;
+	Player* nonCurrentPlayer;
 	CardCollection cards;
 	CardCollection discardPile;
 
