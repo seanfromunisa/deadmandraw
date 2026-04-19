@@ -24,7 +24,7 @@ public:
 	int score() const;
 	bool playCard(Card &card, Game &game, Player &player);
 	void bankCards(Game& game, Player& player);
-	void displayPlayerBank() const;
+	void displayPlayerBank();
 	int calculateScore();
 	void printPlayArea() const;
 };

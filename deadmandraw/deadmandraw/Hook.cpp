@@ -9,6 +9,7 @@ Hook::Hook(int& value) :
 	std::string _stringType = "Hook";
 }
 
+// If there are cards in the current player's bank, choose one to play with grabFromBank()
 void Hook::play(Game& game, Player& player)
 {
 	if (game.nonCurrentPlayer->playerBank.empty()) {

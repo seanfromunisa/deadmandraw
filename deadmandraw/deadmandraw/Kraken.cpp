@@ -10,6 +10,7 @@ Kraken::Kraken(int& value) :
 	std::string _stringType = "Kraken";
 }
 
+// Draws and plays card 3 times
 void Kraken::play(Game& game, Player& player)
 {
 	printf("Draw 3 Cards from the deck and play each:\n");

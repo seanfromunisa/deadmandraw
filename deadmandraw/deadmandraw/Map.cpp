@@ -12,11 +12,15 @@ Map::Map(int& value) :
 	std::string _stringType = "Map";
 }
 
+// Play 1 of 3 cards drawn from discard pile
 void Map::play(Game& game, Player& player)
 {
+	// If empty, draw nothing
 	if (game.discardPile.empty()) {
 		printf("No cards in Discard pile.Play continues.\n");
 	}
+
+	// If not, present up to 3 cards from the discard pile
 	else {
 		printf("Draw 3 cards from the discard and pick one to add to the play area: \n");
 		std::vector<Card> mapCards;
@@ -29,16 +33,20 @@ void Map::play(Game& game, Player& player)
 			printf("(%d) %s\n", (i + 1), mapCards[i].toString());
 		}
 
+		// Let the player decide
 		int cardPick = 0;
 		printf("Which card do you pick? ");
 		scanf("%d", &cardPick);
-
 		Card pickedCard = mapCards[cardPick];
+
+		// Return the rest of the cards
 		for (int i = 0; i < static_cast<int>(mapCards.size()); i++) {
 			if (i != cardPick) {
 				game.discardPile.push_back(&mapCards[i]);
 			}
 		}
+
+		// Play the selected card
 		player.playCard(pickedCard, game, player);
 	}
 }

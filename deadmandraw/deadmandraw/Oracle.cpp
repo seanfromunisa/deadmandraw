@@ -9,12 +9,13 @@ Oracle::Oracle(int& value) :
 	std::string _stringType = "Oracle";
 }
 
+// Display the top card of the deck, if exists
 void Oracle::play(Game& game, Player& player)
 {
 	if (game.cards.empty()) {
 		printf("There are no more cards. Play continues.\n");
 	}
 	else {
-		printf("The Oracle sees a %s\n", game.cards.back()->toString());
+		printf("The Oracle sees a %s\n", game.cards.back()->toString().c_str());
 	}
 }

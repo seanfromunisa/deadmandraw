@@ -9,6 +9,7 @@ Sword::Sword(int& value) :
 	std::string _stringType = "Sword";
 }
 
+// If there are cards in the opponent's bank, choose one to play with grabFromBank()
 void Sword::play(Game& game, Player& player)
 {
 	if (game.nonCurrentPlayer->playerBank.empty()) {

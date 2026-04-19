@@ -19,6 +19,7 @@
 
 int main()
 {
+	// Initiate game
 	Game game;
 }
 

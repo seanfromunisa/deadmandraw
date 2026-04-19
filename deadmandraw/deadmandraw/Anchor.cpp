@@ -9,6 +9,7 @@ Anchor::Anchor(int& value) :
 	std::string _stringType = "Anchor";
 }
 
+// Removes itself from the play area, banks all cards in the play area, and then adds itself back
 void Anchor::play(Game& game, Player& player)
 {
 	Card thisCard = player.playArea.back();

@@ -18,16 +18,17 @@
 
 Game::Game()
 {
+	// Initialising the Game variables
 	Player* player1 = new Player();
 	Player* player2 = new Player();
 	int round = 0;
 	int turn = 0;
 	Player& currentPlayer = *player1;
 	Player& nonCurrentPlayer = *player2;
-	CardCollection cards = {};
-	CardCollection discardPile = {};
+	CardCollection cards;
+	CardCollection discardPile;
 
-
+	// Cards of each suit with values 2-7 are added to the deck
 	for (int i = 2; i < 8; i++) {
 		cards.push_back(new Anchor(i));
 		cards.push_back(new Cannon(i));
@@ -41,8 +42,10 @@ Game::Game()
 		cards.push_back(new Sword(i));
 	}
 
+	// The deck is shuffled
 	shuffleDeck(cards);
 
+	// The game loop starts, checking each turn for an empty deck or if 20 rounds have been played before ending
 	printf("Starting Dead Man's Draw++!\n");
 	while (cards.size() > 0 && turn < 20) {
 		playerTurn();
@@ -54,15 +57,19 @@ Game::~Game()
 {
 }
 
+// Turn-based gameplay loop
 void Game::playerTurn()
 {
+	// Game reference is created to be used in Card and Player functions
 	Game& deadMansDraw = *this;
 
+	// The turn counter is increased, and once both players have had a turn, the round counter is increased
 	turn++;
-	if (turn % 2 == 0) {
+	if (turn % 2 != 0) {
 		round++;
 	}
 
+	// Switches the current and non-current player
 	if (currentPlayer == player1) {
 		currentPlayer = player2;
 		nonCurrentPlayer = player1;
@@ -72,24 +79,35 @@ void Game::playerTurn()
 		nonCurrentPlayer = player2;
 	}
 
+	// drawCard reflects the players choice to draw another card, repeating the "while" loop, though it will always draw at least once
 	std::string drawCard = "y";
-	//printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
-	currentPlayer->displayPlayerBank();
-	printf("%d", static_cast<int>(cards.size()));
 
+	// Display the turn and player information
+	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
+	currentPlayer->displayPlayerBank();
+
+	// Aforementioned card drawing loop
 	while (drawCard == "y") {
+
+		// A card is taken from the deck, to be placed in the play area with Player.playCard()
 		Card drawnCard = *cards.back();
 		cards.pop_back();
+
+		// playCard() will return whether the player busted before allowing them to draw again
 		if (currentPlayer->playCard(drawnCard, deadMansDraw, *currentPlayer)) {
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
 				scanf("%s", drawCard);
 				if (drawCard == "n") {
+					
+					// If the player chooses not to draw again, the played cards are added to their bank
 					currentPlayer->bankCards(deadMansDraw, *currentPlayer);
 					currentPlayer->displayPlayerBank();
 				}
 			}
+
+			// If there are no more cards to draw, the draw loop and player turn will end
 			else {
 				printf("NO MORE CARDS! The deck is now empty.\n");
 				drawCard = "n";
@@ -101,6 +119,7 @@ void Game::playerTurn()
 	}
 }
 
+// Print player banks and then compare the player scores, announcing the winner
 void Game::gameEnd()
 {
 	printf("--- Game Over ---");

@@ -9,6 +9,7 @@ Cannon::Cannon(int& value) :
 	std::string _stringType = "Cannon";
 }
 
+// If there are cards in the opponent's bank, choose one to discard with grabFromBank()
 void Cannon::play(Game& game, Player& player)
 {
 	if (game.nonCurrentPlayer->playerBank.empty()) {
