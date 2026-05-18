@@ -19,14 +19,14 @@
 Game::Game()
 {
 	// Initialising the Game variables
-	Player* player1 = new Player();
-	Player* player2 = new Player();
-	int round = 0;
-	int turn = 0;
-	Player& currentPlayer = *player1;
-	Player& nonCurrentPlayer = *player2;
-	CardCollection cards;
-	CardCollection discardPile;
+	player1 = new Player();
+	player2 = new Player();
+	round = 0;
+	turn = 0;
+	currentPlayer = player1;
+	nonCurrentPlayer = player2;
+	cards;
+	discardPile;
 
 	// Cards of each suit with values 2-7 are added to the deck
 	for (int i = 2; i < 8; i++) {
@@ -44,6 +44,12 @@ Game::Game()
 
 	// The deck is shuffled
 	shuffleDeck(cards);
+
+	//TESTING!!!!
+	for (Card* card : cards) {
+		printf("%s", card->toString().c_str());
+	}
+	printf("%d", cards.size());
 
 	// The game loop starts, checking each turn for an empty deck or if 20 rounds have been played before ending
 	printf("Starting Dead Man's Draw++!\n");

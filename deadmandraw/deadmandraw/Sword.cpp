@@ -5,8 +5,8 @@
 Sword::Sword(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Sword;
-	std::string _stringType = "Sword";
+	_type = CardType::Sword;
+	_stringType = "Sword";
 }
 
 // If there are cards in the opponent's bank, choose one to play with grabFromBank()

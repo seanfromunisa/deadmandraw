@@ -8,8 +8,8 @@
 Map::Map(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Map;
-	std::string _stringType = "Map";
+	_type = CardType::Map;
+	_stringType = "Map";
 }
 
 // Play 1 of 3 cards drawn from discard pile
@@ -30,7 +30,7 @@ void Map::play(Game& game, Player& player)
 			mapCards.push_back(drawnCard);
 		}
 		for (int i = 0; i < static_cast<int>(mapCards.size()); i++) {
-			printf("(%d) %s\n", (i + 1), mapCards[i].toString());
+			printf("(%d) %s\n", (i + 1), mapCards[i].toString().c_str());
 		}
 
 		// Let the player decide

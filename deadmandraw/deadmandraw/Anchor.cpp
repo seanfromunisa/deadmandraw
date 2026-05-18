@@ -5,8 +5,8 @@
 Anchor::Anchor(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Anchor;
-	std::string _stringType = "Anchor";
+	_type = CardType::Anchor;
+	_stringType = "Anchor";
 }
 
 // Removes itself from the play area, banks all cards in the play area, and then adds itself back

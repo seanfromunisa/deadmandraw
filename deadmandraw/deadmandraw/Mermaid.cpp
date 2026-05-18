@@ -6,8 +6,8 @@ Mermaid::Mermaid(int& value) :
 	// Value is increased by 2
 	_value{ value + 2 }
 {
-	CardType _type = CardType::Mermaid;
-	std::string _stringType = "Mermaid";
+	_type = CardType::Mermaid;
+	_stringType = "Mermaid";
 }
 
 // No effect. Ability is envoked on creation

@@ -6,8 +6,8 @@
 Kraken::Kraken(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Kraken;
-	std::string _stringType = "Kraken";
+	_type = CardType::Kraken;
+	_stringType = "Kraken";
 }
 
 // Draws and plays card 3 times

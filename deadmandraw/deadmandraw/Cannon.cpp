@@ -5,8 +5,8 @@
 Cannon::Cannon(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Cannon;
-	std::string _stringType = "Cannon";
+	_type = CardType::Cannon;
+	_stringType = "Cannon";
 }
 
 // If there are cards in the opponent's bank, choose one to discard with grabFromBank()

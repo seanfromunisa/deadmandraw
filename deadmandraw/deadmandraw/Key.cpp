@@ -6,8 +6,8 @@
 Key::Key(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Key;
-	std::string _stringType = "Key";
+	_type = CardType::Key;
+	_stringType = "Key";
 }
 
 // No play effect. Ability relies on overwriting willAddToBank

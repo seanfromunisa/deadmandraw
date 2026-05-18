@@ -5,8 +5,8 @@
 Chest::Chest(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Chest;
-	std::string _stringType = "Chest";
+	_type = CardType::Chest;
+	_stringType = "Chest";
 }
 
 // No effect. Activates Key ability

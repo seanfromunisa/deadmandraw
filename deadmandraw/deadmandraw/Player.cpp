@@ -10,10 +10,10 @@ Player::Player()
 
 	// Player name is randomly chosen from array of 10 options
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
-	std::string _name = names[rand() % 10];
+	_name = names[rand() % 10];
 
-	CardCollection playerBank;
-	CardCollection playArea;
+	playerBank;
+	playArea;
 }
 
 Player::~Player()

@@ -5,8 +5,8 @@
 Oracle::Oracle(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Oracle;
-	std::string _stringType = "Oracle";
+	_type = CardType::Oracle;
+	_stringType = "Oracle";
 }
 
 // Display the top card of the deck, if exists

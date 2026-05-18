@@ -5,8 +5,8 @@
 Hook::Hook(int& value) :
 	_value{ value }
 {
-	CardType _type = CardType::Hook;
-	std::string _stringType = "Hook";
+	_type = CardType::Hook;
+	_stringType = "Hook";
 }
 
 // If there are cards in the current player's bank, choose one to play with grabFromBank()
