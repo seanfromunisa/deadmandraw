@@ -2,9 +2,9 @@
 #include "Player.h"
 #include "Game.h"
 
-Hook::Hook(int& value) :
-	_value{ value }
+Hook::Hook(int& value)
 {
+	_value = value;
 	_type = CardType::Hook;
 	_stringType = "Hook";
 }

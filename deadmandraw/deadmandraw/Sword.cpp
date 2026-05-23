@@ -2,9 +2,9 @@
 #include "Player.h"
 #include "Game.h"
 
-Sword::Sword(int& value) :
-	_value{ value }
+Sword::Sword(int& value)
 {
+	_value = value;
 	_type = CardType::Sword;
 	_stringType = "Sword";
 }

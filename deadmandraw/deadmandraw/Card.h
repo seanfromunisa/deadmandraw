@@ -21,6 +21,6 @@ public:
 	const CardType& type() const;
 	int value() const;
 	virtual void play(Game& game, Player& player);
-	Card& grabFromBank(Player &player);
+	std::shared_ptr<Card> grabFromBank(Player &player);
 	virtual void willAddToBank(Game& game, Player& player);
 };

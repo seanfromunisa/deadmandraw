@@ -2,9 +2,9 @@
 #include "Player.h"
 #include "Game.h"
 
-Chest::Chest(int& value) :
-	_value{ value }
+Chest::Chest(int& value)
 {
+	_value = value;
 	_type = CardType::Chest;
 	_stringType = "Chest";
 }

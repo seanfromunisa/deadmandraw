@@ -2,9 +2,9 @@
 #include "Player.h"
 #include "Game.h"
 
-Cannon::Cannon(int& value) :
-	_value{ value }
+Cannon::Cannon(int& value)
 {
+	_value = value;
 	_type = CardType::Cannon;
 	_stringType = "Cannon";
 }
@@ -17,6 +17,6 @@ void Cannon::play(Game& game, Player& player)
 	}
 	else {
 		printf("Steal the top card of any suit from the other player's Bank into your Play Area:\n");
-		game.discardPile.push_back(&grabFromBank(*game.nonCurrentPlayer));
+		game.discardPile.push_back(grabFromBank(*game.nonCurrentPlayer));
 	}
 }

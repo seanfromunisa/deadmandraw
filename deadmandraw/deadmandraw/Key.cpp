@@ -3,9 +3,9 @@
 #include "Game.h"
 #include <algorithm>
 
-Key::Key(int& value) :
-	_value{ value }
+Key::Key(int& value)
 {
+	_value = value;
 	_type = CardType::Key;
 	_stringType = "Key";
 }
@@ -20,8 +20,8 @@ void Key::play(Game& game, Player& player)
 void Key::willAddToBank(Game& game, Player& player)
 {
 	// Check for Chest in playArea
-	for (Card card : player.playArea) {
-		if (card.type() == CardType::Chest) {
+	for (std::shared_ptr<Card> card : player.playArea) {
+		if (card->type() == CardType::Chest) {
 
 			// If there are no cards in discard pile, bank nothing
 			if (game.discardPile.empty()) {
@@ -34,10 +34,10 @@ void Key::willAddToBank(Game& game, Player& player)
 
 				// Will only add up to as many as exist in the discard pile
 				for (int i = 0; i < std::min(static_cast<int>(game.discardPile.size()), static_cast<int>(player.playArea.size())); i++) {
-					Card drawnCard = *game.discardPile.back();
+					std::shared_ptr<Card> drawnCard = game.discardPile.back();
 					game.discardPile.pop_back();
 					player.playerBank.push_back(drawnCard);
-					printf("%s, ", drawnCard.toString().c_str());
+					printf("%s, ", drawnCard->toString().c_str());
 				}
 				printf("to your bank.");
 			}

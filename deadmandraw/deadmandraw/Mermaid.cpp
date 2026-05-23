@@ -2,10 +2,10 @@
 #include "Player.h"
 #include "Game.h"
 
-Mermaid::Mermaid(int& value) :
-	// Value is increased by 2
-	_value{ value + 2 }
+Mermaid::Mermaid(int& value)
 {
+	// Value is increased by 2
+	_value = value + 2;
 	_type = CardType::Mermaid;
 	_stringType = "Mermaid";
 }

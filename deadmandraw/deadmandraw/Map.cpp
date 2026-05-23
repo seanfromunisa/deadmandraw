@@ -5,9 +5,9 @@
 #include <string>
 #include <vector>
 
-Map::Map(int& value) :
-	_value{ value }
+Map::Map(int& value)
 {
+	_value = value;
 	_type = CardType::Map;
 	_stringType = "Map";
 }
@@ -23,26 +23,26 @@ void Map::play(Game& game, Player& player)
 	// If not, present up to 3 cards from the discard pile
 	else {
 		printf("Draw 3 cards from the discard and pick one to add to the play area: \n");
-		std::vector<Card> mapCards;
+		std::vector<std::shared_ptr<Card>> mapCards;
 		for (int i = 0; i < std::min(3, static_cast<int>(game.discardPile.size())); i++) {
-			Card drawnCard = *game.discardPile.back();
+			std::shared_ptr<Card> drawnCard = game.discardPile.back();
 			game.discardPile.pop_back();
 			mapCards.push_back(drawnCard);
 		}
 		for (int i = 0; i < static_cast<int>(mapCards.size()); i++) {
-			printf("(%d) %s\n", (i + 1), mapCards[i].toString().c_str());
+			printf("(%d) %s\n", (i + 1), mapCards[i]->toString().c_str());
 		}
 
 		// Let the player decide
 		int cardPick = 0;
 		printf("Which card do you pick? ");
 		scanf("%d", &cardPick);
-		Card pickedCard = mapCards[cardPick];
+		std::shared_ptr<Card> pickedCard = mapCards[cardPick];
 
 		// Return the rest of the cards
 		for (int i = 0; i < static_cast<int>(mapCards.size()); i++) {
 			if (i != cardPick) {
-				game.discardPile.push_back(&mapCards[i]);
+				game.discardPile.push_back(mapCards[i]);
 			}
 		}
 

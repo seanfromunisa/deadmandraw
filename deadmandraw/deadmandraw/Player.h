@@ -8,7 +8,7 @@ class Game;
 class Player
 {
 public:
-	typedef std::vector<Card> CardCollection;
+	typedef std::vector<std::shared_ptr<Card>> CardCollection;
 
 	CardCollection playerBank;
 	CardCollection playArea;
@@ -22,7 +22,7 @@ public:
 	~Player();
 	std::string name() const;
 	int score() const;
-	bool playCard(Card &card, Game &game, Player &player);
+	bool playCard(std::shared_ptr<Card> card, Game &game, Player &player);
 	void bankCards(Game& game, Player& player);
 	void displayPlayerBank();
 	int calculateScore();

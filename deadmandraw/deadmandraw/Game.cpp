@@ -30,26 +30,26 @@ Game::Game()
 
 	// Cards of each suit with values 2-7 are added to the deck
 	for (int i = 2; i < 8; i++) {
-		cards.push_back(new Anchor(i));
-		cards.push_back(new Cannon(i));
-		cards.push_back(new Chest(i));
-		cards.push_back(new Hook(i));
-		cards.push_back(new Key(i));
-		cards.push_back(new Kraken(i));
-		cards.push_back(new Map(i));
-		cards.push_back(new Mermaid(i));
-		cards.push_back(new Oracle(i));
-		cards.push_back(new Sword(i));
+		cards.push_back(std::make_shared<Anchor>(i));
+		cards.push_back(std::make_shared<Cannon>(i));
+		cards.push_back(std::make_shared<Chest>(i));
+		cards.push_back(std::make_shared<Hook>(i));
+		cards.push_back(std::make_shared<Key>(i));
+		cards.push_back(std::make_shared<Kraken>(i));
+		cards.push_back(std::make_shared<Map>(i));
+		cards.push_back(std::make_shared<Mermaid>(i));
+		cards.push_back(std::make_shared<Oracle>(i));
+		cards.push_back(std::make_shared<Sword>(i));
 	}
 
 	// The deck is shuffled
 	shuffleDeck(cards);
 
 	//TESTING!!!!
-	for (Card* card : cards) {
+	for (std::shared_ptr<Card> card : cards) {
 		printf("%s", card->toString().c_str());
 	}
-	printf("%d", cards.size());
+	printf("%d", static_cast<int>(cards.size()));
 
 	// The game loop starts, checking each turn for an empty deck or if 20 rounds have been played before ending
 	printf("Starting Dead Man's Draw++!\n");
@@ -96,7 +96,7 @@ void Game::playerTurn()
 	while (drawCard == "y") {
 
 		// A card is taken from the deck, to be placed in the play area with Player.playCard()
-		Card drawnCard = *cards.back();
+		std::shared_ptr<Card> drawnCard = cards.back();
 		cards.pop_back();
 
 		// playCard() will return whether the player busted before allowing them to draw again

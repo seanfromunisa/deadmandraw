@@ -8,7 +8,7 @@ class Card;
 class Game
 {
 public:
-	typedef std::vector<Card*> CardCollection;
+	typedef std::vector<std::shared_ptr<Card>> CardCollection;
 
 	Player* player1;
 	Player* player2;

@@ -2,9 +2,9 @@
 #include "Player.h"
 #include "Game.h"
 
-Oracle::Oracle(int& value) :
-	_value{ value }
+Oracle::Oracle(int& value)
 {
+	_value = value;
 	_type = CardType::Oracle;
 	_stringType = "Oracle";
 }

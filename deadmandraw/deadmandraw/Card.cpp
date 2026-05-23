@@ -33,26 +33,26 @@ void Card::play(Game& game, Player& player)
 }
 
 // Displays a player's bank and allows player to choose the card the function will return
-Card& Card::grabFromBank(Player& player)
+std::shared_ptr<Card> Card::grabFromBank(Player& player)
 {
 	// Map of highest value card for each type in bank
-	std::map<CardType, Card> availableCards;
-	for (Card card : player.playerBank) {
-		CardType currentCardType = card.type();
-		if (availableCards[currentCardType].value() < card.value()) {
+	std::map<CardType, std::shared_ptr<Card>> availableCards;
+	for (std::shared_ptr<Card> card : player.playerBank) {
+		CardType currentCardType = card->type();
+		if (availableCards[currentCardType]->value() < card->value()) {
 			availableCards[currentCardType] = card;
 		}
 	}
 	
 	// Vector of highest value card for each type in bank
-	std::vector<Card> finalCards;
+	std::vector<std::shared_ptr<Card>> finalCards;
 	for (const auto& keyValuePair : availableCards) {
 		finalCards.push_back(keyValuePair.second);
 	}
 
 	// Print and number each available option for the player to choose to return
 	for (int i = 0; i < static_cast<int>(finalCards.size()); i++) {
-		printf("(%d) %s\n", (i + 1), finalCards[i].toString().c_str());
+		printf("(%d) %s\n", (i + 1), finalCards[i]->toString().c_str());
 	}
 
 	int cardPick = 0;
