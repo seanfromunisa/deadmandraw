@@ -7,28 +7,44 @@
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\deadmandraw.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Sword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Sword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Oracle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Oracle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Mermaid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Mermaid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Kraken.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Kraken.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Anchor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Mermaid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Mermaid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Sword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Sword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Oracle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Oracle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Key.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -47,28 +63,12 @@
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Cannon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Anchor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Anchor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|solutionrelative:deadmandraw\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A076199-6792-471C-B26C-5AF9E3D4D44C}|deadmandraw\\deadmandraw.vcxproj|C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Sword.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -131,22 +131,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 289,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Map.cpp",
-              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Map.cpp",
-              "RelativeDocumentMoniker": "deadmandraw\\Map.cpp",
-              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Map.cpp",
-              "RelativeToolTip": "deadmandraw\\Map.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T13:29:27.017Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -155,7 +141,7 @@
               "RelativeDocumentMoniker": "deadmandraw\\deadmandraw.cpp",
               "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\deadmandraw.cpp",
               "RelativeToolTip": "deadmandraw\\deadmandraw.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-17T12:49:14.138Z",
               "IsPinned": true,
@@ -163,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.h",
               "RelativeDocumentMoniker": "deadmandraw\\Game.h",
@@ -172,18 +158,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-17T12:40:45.65Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Game.cpp",
               "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Game.cpp",
               "RelativeToolTip": "deadmandraw\\Game.cpp",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAADIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAASwGYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-17T11:32:31.102Z",
               "IsPinned": true,
@@ -199,59 +184,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Chest.cpp",
-              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Chest.cpp",
-              "RelativeDocumentMoniker": "deadmandraw\\Chest.cpp",
-              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Chest.cpp",
-              "RelativeToolTip": "deadmandraw\\Chest.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Map.cpp",
+              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Map.cpp",
+              "RelativeDocumentMoniker": "deadmandraw\\Map.cpp",
+              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Map.cpp",
+              "RelativeToolTip": "deadmandraw\\Map.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T12:05:55.191Z",
+              "WhenOpened": "2026-04-17T13:29:27.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Hook.cpp",
-              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Hook.cpp",
-              "RelativeDocumentMoniker": "deadmandraw\\Hook.cpp",
-              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Hook.cpp",
-              "RelativeToolTip": "deadmandraw\\Hook.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T12:12:16.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Key.cpp",
-              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Key.cpp",
-              "RelativeDocumentMoniker": "deadmandraw\\Key.cpp",
-              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Key.cpp",
-              "RelativeToolTip": "deadmandraw\\Key.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T12:03:09.352Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Kraken.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Kraken.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Kraken.cpp",
               "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Kraken.cpp",
               "RelativeToolTip": "deadmandraw\\Kraken.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-17T11:45:53.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Mermaid.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Mermaid.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Mermaid.cpp",
@@ -264,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Oracle.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Oracle.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Oracle.cpp",
@@ -272,25 +231,24 @@
               "RelativeToolTip": "deadmandraw\\Oracle.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T14:06:10.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:06:10.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Player.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Player.cpp",
               "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Player.cpp",
               "RelativeToolTip": "deadmandraw\\Player.cpp",
-              "ViewState": "AgIAAB8AAAAAAAAAAAASwDAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAG8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-17T11:29:49.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Sword.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Sword.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Sword.cpp",
@@ -298,12 +256,11 @@
               "RelativeToolTip": "deadmandraw\\Sword.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T11:09:40.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T11:09:40.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Cannon.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Cannon.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Cannon.cpp",
@@ -311,18 +268,17 @@
               "RelativeToolTip": "deadmandraw\\Cannon.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T11:09:37.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T11:09:37.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Anchor.cpp",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.cpp",
               "RelativeDocumentMoniker": "deadmandraw\\Anchor.cpp",
               "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.cpp",
               "RelativeToolTip": "deadmandraw\\Anchor.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-17T11:09:33.062Z",
               "EditorCaption": ""
@@ -330,6 +286,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Hook.cpp",
+              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Hook.cpp",
+              "RelativeDocumentMoniker": "deadmandraw\\Hook.cpp",
+              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Hook.cpp",
+              "RelativeToolTip": "deadmandraw\\Hook.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-17T12:12:16.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Chest.cpp",
+              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Chest.cpp",
+              "RelativeDocumentMoniker": "deadmandraw\\Chest.cpp",
+              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Chest.cpp",
+              "RelativeToolTip": "deadmandraw\\Chest.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-17T12:05:55.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Anchor.h",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Anchor.h",
               "RelativeDocumentMoniker": "deadmandraw\\Anchor.h",
@@ -337,12 +317,36 @@
               "RelativeToolTip": "deadmandraw\\Anchor.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T11:07:44.972Z",
+              "WhenOpened": "2026-04-17T11:07:44.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Card.cpp",
+              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp",
+              "RelativeDocumentMoniker": "deadmandraw\\Card.cpp",
+              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp",
+              "RelativeToolTip": "deadmandraw\\Card.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-17T11:16:20.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
+              "Title": "Key.cpp",
+              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Key.cpp",
+              "RelativeDocumentMoniker": "deadmandraw\\Key.cpp",
+              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Key.cpp",
+              "RelativeToolTip": "deadmandraw\\Key.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-17T12:03:09.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Card.h",
               "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.h",
               "RelativeDocumentMoniker": "deadmandraw\\Card.h",
@@ -350,21 +354,7 @@
               "RelativeToolTip": "deadmandraw\\Card.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T11:24:56.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Card.cpp",
-              "DocumentMoniker": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp",
-              "RelativeDocumentMoniker": "deadmandraw\\Card.cpp",
-              "ToolTip": "C:\\Users\\mooka\\Documents\\Uni Work\\c\u002B\u002B\\deadmandraw\\deadmandraw\\deadmandraw\\Card.cpp",
-              "RelativeToolTip": "deadmandraw\\Card.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-17T11:16:20.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T11:24:56.674Z"
             },
             {
               "$type": "Document",
@@ -376,8 +366,7 @@
               "RelativeToolTip": "deadmandraw\\Sword.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:08:47.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:08:47.214Z"
             },
             {
               "$type": "Document",
@@ -389,8 +378,7 @@
               "RelativeToolTip": "deadmandraw\\Oracle.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:08:44.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:08:44.38Z"
             },
             {
               "$type": "Document",
@@ -402,8 +390,7 @@
               "RelativeToolTip": "deadmandraw\\Mermaid.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:08:39.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:08:39.74Z"
             },
             {
               "$type": "Document",
@@ -415,8 +402,7 @@
               "RelativeToolTip": "deadmandraw\\Map.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:08:37.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:08:37.527Z"
             },
             {
               "$type": "Document",
@@ -428,8 +414,7 @@
               "RelativeToolTip": "deadmandraw\\Kraken.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:08:35.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:08:35.76Z"
             },
             {
               "$type": "Document",
@@ -441,8 +426,7 @@
               "RelativeToolTip": "deadmandraw\\Key.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T12:49:02.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T12:49:02.261Z"
             },
             {
               "$type": "Document",
@@ -454,8 +438,7 @@
               "RelativeToolTip": "deadmandraw\\Hook.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:07:24.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:07:24.801Z"
             },
             {
               "$type": "Document",
@@ -467,8 +450,7 @@
               "RelativeToolTip": "deadmandraw\\Chest.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T14:07:20.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T14:07:20.981Z"
             },
             {
               "$type": "Document",
@@ -480,8 +462,7 @@
               "RelativeToolTip": "deadmandraw\\Cannon.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T11:09:27.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T11:09:27.589Z"
             },
             {
               "$type": "Document",
@@ -493,8 +474,7 @@
               "RelativeToolTip": "deadmandraw\\Player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-17T11:29:54.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T11:29:54.849Z"
             },
             {
               "$type": "Document",

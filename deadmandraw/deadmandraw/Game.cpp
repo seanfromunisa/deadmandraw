@@ -86,14 +86,14 @@ void Game::playerTurn()
 	}
 
 	// drawCard reflects the players choice to draw another card, repeating the "while" loop, though it will always draw at least once
-	std::string drawCard = "y";
+	char drawCard = 'y';
 
 	// Display the turn and player information
 	printf("--- Round %d, Turn %d ---\n%s's turn.\n", round, turn, currentPlayer->name().c_str());
 	currentPlayer->displayPlayerBank();
 
 	// Aforementioned card drawing loop
-	while (drawCard == "y") {
+	while (drawCard == 'y') {
 
 		// A card is taken from the deck, to be placed in the play area with Player.playCard()
 		std::shared_ptr<Card> drawnCard = cards.back();
@@ -104,8 +104,10 @@ void Game::playerTurn()
 			if (cards.size() > 0) {
 				currentPlayer->printPlayArea();
 				printf("\nDo you want to draw again? (y/n): ");
-				scanf("%s", drawCard);
-				if (drawCard == "n") {
+				if (scanf(" %c", &drawCard) != 1) {
+					drawCard = 'n';
+				}
+				if (drawCard == 'n') {
 					
 					// If the player chooses not to draw again, the played cards are added to their bank
 					currentPlayer->bankCards(deadMansDraw, *currentPlayer);
@@ -116,11 +118,11 @@ void Game::playerTurn()
 			// If there are no more cards to draw, the draw loop and player turn will end
 			else {
 				printf("NO MORE CARDS! The deck is now empty.\n");
-				drawCard = "n";
+				drawCard = 'n';
 			}
 		}
 		else {
-			drawCard = "n";
+			drawCard = 'n';
 		}
 	}
 }

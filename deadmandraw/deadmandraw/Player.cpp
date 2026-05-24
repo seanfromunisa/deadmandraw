@@ -35,7 +35,7 @@ int Player::score() const
 // Plays card from the play area, checking for a bust
 bool Player::playCard(std::shared_ptr<Card> card, Game& game, Player& player)
 {
-	printf("%s draws a %s", _name.c_str(), card->toString().c_str());
+	printf("%s draws a %s\n", _name.c_str(), card->toString().c_str());
 
 	// Boolean to be checked after verifying each card already in play area
 	bool notBust = true;
@@ -83,7 +83,7 @@ void Player::displayPlayerBank()
 	for (std::shared_ptr<Card> card : playerBank) {
 		printf("%s\n", card->toString().c_str());
 	}
-	printf("| Score: %d", static_cast<int>(calculateScore()));
+	printf("| Score: %d\n", static_cast<int>(calculateScore()));
 }
 
 // Calculates player score
@@ -93,15 +93,19 @@ int Player::calculateScore()
 	std::map<Card::CardType, std::shared_ptr<Card>> scoredCards;
 	for (std::shared_ptr<Card> card : playerBank) {
 		Card::CardType currentCardType = card->type();
-		if (scoredCards[currentCardType]->value() < card->value()) {
-			scoredCards[currentCardType] = card;
+		if (scoredCards[currentCardType] != nullptr) {
+			if (scoredCards[currentCardType]->value() < card->value()) {
+				scoredCards[currentCardType] = card;
+			}
 		}
 	}
 
 	// Total value of highest value cards
 	int total = 0;
 	for (const auto& keyValuePair : scoredCards) {
-		total = total + keyValuePair.second->value();
+		if (keyValuePair.second != nullptr) {
+			total = total + keyValuePair.second->value();
+		}
 	}
 
 	// Update the player score and return the value

@@ -17,7 +17,7 @@ void Map::play(Game& game, Player& player)
 {
 	// If empty, draw nothing
 	if (game.discardPile.empty()) {
-		printf("No cards in Discard pile.Play continues.\n");
+		printf("No cards in Discard pile. Play continues.\n");
 	}
 
 	// If not, present up to 3 cards from the discard pile
