@@ -13,5 +13,5 @@ Mermaid::Mermaid(int& value)
 // No effect. Ability is envoked on creation
 void Mermaid::play(Game& game, Player& player)
 {
-	printf("No effect but Mermaids are worth more.\n");
+	printf(" No effect but Mermaids are worth more.\n");
 }

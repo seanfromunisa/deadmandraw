@@ -45,12 +45,6 @@ Game::Game()
 	// The deck is shuffled
 	shuffleDeck(cards);
 
-	//TESTING!!!!
-	for (std::shared_ptr<Card> card : cards) {
-		printf("%s", card->toString().c_str());
-	}
-	printf("%d", static_cast<int>(cards.size()));
-
 	// The game loop starts, checking each turn for an empty deck or if 20 rounds have been played before ending
 	printf("Starting Dead Man's Draw++!\n");
 	while (cards.size() > 0 && turn < 20) {

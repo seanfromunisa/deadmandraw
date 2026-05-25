@@ -16,6 +16,7 @@ public:
 protected:
 	std::string _name;
 	int _score;
+	bool _notBust;
 
 public:
 	Player();
@@ -23,6 +24,7 @@ public:
 	std::string name() const;
 	int score() const;
 	bool playCard(std::shared_ptr<Card> card, Game &game, Player &player);
+	void setNotBust(bool setBool);
 	void bankCards(Game& game, Player& player);
 	void displayPlayerBank();
 	int calculateScore();

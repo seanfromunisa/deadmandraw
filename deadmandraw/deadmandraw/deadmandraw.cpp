@@ -15,10 +15,14 @@
 #include "Mermaid.h"
 #include "Oracle.h"
 #include "Sword.h"
+#include "game_title.h"
 
 
 int main()
 {
+	// Print game title
+	printf("%s", GAME_TITLE);
+
 	// Initiate game
 	Game game;
 }

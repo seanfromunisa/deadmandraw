@@ -7,6 +7,7 @@
 Player::Player()
 {
 	_score = 0;
+	_notBust = true;
 
 	// Player name is randomly chosen from array of 10 options
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
@@ -38,10 +39,10 @@ bool Player::playCard(std::shared_ptr<Card> card, Game& game, Player& player)
 	printf("%s draws a %s\n", _name.c_str(), card->toString().c_str());
 
 	// Boolean to be checked after verifying each card already in play area
-	bool notBust = true;
+	_notBust = true;
 	for (std::shared_ptr<Card> playedCard : playArea) {
 		if (playedCard->type() == card->type()) {
-			notBust = false;
+			_notBust = false;
 		}
 	}
 
@@ -49,8 +50,8 @@ bool Player::playCard(std::shared_ptr<Card> card, Game& game, Player& player)
 	playArea.push_back(card);
 
 	// If the player busts, their cards are sent to the discard pile
-	if (notBust == false) {
-		printf("BUST! %s loses all cards in play area.", _name.c_str());
+	if (_notBust == false) {
+		printf("BUST! %s loses all cards in play area.\n", _name.c_str());
 		for (std::shared_ptr<Card> disCards : playArea) {
 			game.discardPile.push_back(disCards);
 		}
@@ -63,7 +64,13 @@ bool Player::playCard(std::shared_ptr<Card> card, Game& game, Player& player)
 	}
 
 	// Return whether the player busted
-	return notBust;
+	return _notBust;
+}
+
+// Changes bool _notBust. For card abilities to access
+void Player::setNotBust(bool setBool)
+{
+	_notBust = setBool;
 }
 
 // Invokes bank function of each card in play area, adding them to the player bank and then clearing the play area
@@ -79,10 +86,23 @@ void Player::bankCards(Game& game, Player& player)
 // Display each card in the player's bank and the player score
 void Player::displayPlayerBank()
 {
-	printf("%s's Bank:\n", _name.c_str());
+	// Map of card vectors, each pertaining to a particular card type
+	std::map<Card::CardType, CardCollection> cardsInBank;
 	for (std::shared_ptr<Card> card : playerBank) {
-		printf("%s\n", card->toString().c_str());
+		Card::CardType currentCardType = card->type();
+		cardsInBank[currentCardType].push_back(card);
 	}
+
+	printf("%s's Bank:\n", _name.c_str());
+
+	// Each set of cards in bank will be printed on a single line, seperated by type
+	for (const auto& keyValuePair : cardsInBank) {
+		for (std::shared_ptr<Card> card : keyValuePair.second) {
+			printf(" %s", card->toString().c_str());
+		}
+		printf("\n");
+	}
+
 	printf("| Score: %d\n", static_cast<int>(calculateScore()));
 }
 
@@ -97,6 +117,11 @@ int Player::calculateScore()
 			if (scoredCards[currentCardType]->value() < card->value()) {
 				scoredCards[currentCardType] = card;
 			}
+		}
+
+		// If the card type does not yet exist in the map, it is added
+		else {
+			scoredCards[currentCardType] = card;
 		}
 	}
 
@@ -119,6 +144,6 @@ void Player::printPlayArea() const
 {
 	printf("%s's Play Area:\n", _name.c_str());
 	for (std::shared_ptr<Card> card : playArea) {
-		printf("%s\n", card->toString().c_str());
+		printf(" %s\n", card->toString().c_str());
 	}
 }

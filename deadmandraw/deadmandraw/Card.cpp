@@ -39,25 +39,37 @@ std::shared_ptr<Card> Card::grabFromBank(Player& player)
 	std::map<CardType, std::shared_ptr<Card>> availableCards;
 	for (std::shared_ptr<Card> card : player.playerBank) {
 		CardType currentCardType = card->type();
-		if (availableCards[currentCardType]->value() < card->value()) {
+		if (availableCards[currentCardType] != nullptr) {
+			if (availableCards[currentCardType]->value() < card->value()) {
+				availableCards[currentCardType] = card;
+			}
+		}
+
+		// If the card type does not yet exist in the map, it is added
+		else {
 			availableCards[currentCardType] = card;
 		}
 	}
 	
 	// Vector of highest value card for each type in bank
 	std::vector<std::shared_ptr<Card>> finalCards;
-	for (const auto& keyValuePair : availableCards) {
-		finalCards.push_back(keyValuePair.second);
+	for (const auto& keyValuePair : availableCards) { 
+		if (keyValuePair.second != nullptr) {
+			finalCards.push_back(keyValuePair.second);
+		}
 	}
 
 	// Print and number each available option for the player to choose to return
 	for (int i = 0; i < static_cast<int>(finalCards.size()); i++) {
-		printf("(%d) %s\n", (i + 1), finalCards[i]->toString().c_str());
+		printf(" (%d) %s\n", (i + 1), finalCards[i]->toString().c_str());
 	}
 
 	int cardPick = 0;
 	printf("Which card do you pick? ");
 	scanf("%d", &cardPick);
+
+	//Remove this card from the player's bank
+	player.playerBank.erase(find(player.playerBank.begin(), player.playerBank.end(), finalCards[cardPick - 1]));
 
 	// -1 to match vector position
 	return finalCards[cardPick - 1];

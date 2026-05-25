@@ -12,7 +12,7 @@ Anchor::Anchor(int& value)
 // Removes itself from the play area, banks all cards in the play area, and then adds itself back
 void Anchor::play(Game& game, Player& player)
 {
-	printf("Any existing cards in the play area are banked.\n");
+	printf(" Any existing cards in the play area are banked.\n");
 	std::shared_ptr<Card> thisCard = player.playArea.back();
 	player.playArea.pop_back();
 	player.bankCards(game, player);

@@ -13,9 +13,9 @@ Oracle::Oracle(int& value)
 void Oracle::play(Game& game, Player& player)
 {
 	if (game.cards.empty()) {
-		printf("There are no more cards. Play continues.\n");
+		printf(" There are no more cards. Play continues.\n");
 	}
 	else {
-		printf("The Oracle sees a %s\n", game.cards.back()->toString().c_str());
+		printf(" The Oracle sees a %s\n", game.cards.back()->toString().c_str());
 	}
 }

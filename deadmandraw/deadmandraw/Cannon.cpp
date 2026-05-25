@@ -13,10 +13,10 @@ Cannon::Cannon(int& value)
 void Cannon::play(Game& game, Player& player)
 {
 	if (game.nonCurrentPlayer->playerBank.empty()) {
-		printf("No cards in other player's Bank. Play continues.\n");
+		printf(" No cards in other player's Bank. Play continues.\n");
 	}
 	else {
-		printf("Steal the top card of any suit from the other player's Bank into your Play Area:\n");
+		printf(" Launch the top card of any suit from the other player's Bank into the Discard Pile:\n");
 		game.discardPile.push_back(grabFromBank(*game.nonCurrentPlayer));
 	}
 }
