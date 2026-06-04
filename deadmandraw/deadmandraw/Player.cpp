@@ -9,6 +9,9 @@ Player::Player()
 	_score = 0;
 	_notBust = true;
 
+	// Seed based on time (mmmm seed)
+	srand(time(NULL));
+
 	// Player name is randomly chosen from array of 10 options
 	std::string names[] = { "Luffy", "Zoro", "Nami", "Usopp", "Sanji", "Chopper", "Robin", "Franky", "Brook", "Jinbe" };
 	_name = names[rand() % 10];

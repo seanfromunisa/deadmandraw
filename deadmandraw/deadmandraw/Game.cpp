@@ -20,7 +20,14 @@ Game::Game()
 {
 	// Initialising the Game variables
 	player1 = new Player();
+
+	// Ensure player 2 has a different name than player 1
 	player2 = new Player();
+	while (player2->name() == player1->name()) {
+		delete player2;
+		player2 = new Player();
+	}
+
 	round = 0;
 	turn = 0;
 	currentPlayer = player1;
